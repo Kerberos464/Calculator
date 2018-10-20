@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1917BE217BAFE300D34306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCF4252177CB0B000FDB06 /* Main.storyboard */; };
 		0ADCF4222177CB0B000FDB06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCF4212177CB0B000FDB06 /* AppDelegate.swift */; };
 		0ADCF4242177CB0B000FDB06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADCF4232177CB0B000FDB06 /* ViewController.swift */; };
-		0ADCF4272177CB0B000FDB06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCF4252177CB0B000FDB06 /* Main.storyboard */; };
 		0ADCF4292177CB32000FDB06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCF4282177CB32000FDB06 /* Assets.xcassets */; };
 		0ADCF42C2177CB32000FDB06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADCF42A2177CB32000FDB06 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -32,15 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0ADCF41E2177CB0B000FDB06 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = test.app; path = "/Users/dmitry/Desktop/Calculator/build/Release-iphoneos/test.app"; sourceTree = "<absolute>"; };
+		0A1917BB217BA9AE00D34306 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = test.app; path = "/Users/dmitry/Desktop/Calculator/build/Release-iphoneos/test.app"; sourceTree = "<absolute>"; };
+		0A1917BC217BA9AE00D34306 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1917BD217BA9AE00D34306 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADCF4212177CB0B000FDB06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ADCF4232177CB0B000FDB06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0ADCF4262177CB0B000FDB06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0ADCF4282177CB32000FDB06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ADCF42B2177CB32000FDB06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ADCF42D2177CB32000FDB06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ADCF4322177CB33000FDB06 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testTests.xctest; path = "/Users/dmitry/Desktop/Calculator/build/Release-iphoneos/testTests.xctest"; sourceTree = "<absolute>"; };
-		0ADCF43D2177CB34000FDB06 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = testUITests.xctest; path = "/Users/dmitry/Desktop/Calculator/build/Release-iphoneos/testUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				0ADCF4202177CB0B000FDB06 /* Calculator */,
+				0A1917BC217BA9AE00D34306 /* testTests.xctest */,
+				0A1917BD217BA9AE00D34306 /* testUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +107,7 @@
 			);
 			name = test;
 			productName = test;
-			productReference = 0ADCF41E2177CB0B000FDB06 /* test.app */;
+			productReference = 0A1917BB217BA9AE00D34306 /* test.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0ADCF4312177CB33000FDB06 /* testTests */ = {
@@ -123,7 +125,7 @@
 			);
 			name = testTests;
 			productName = testTests;
-			productReference = 0ADCF4322177CB33000FDB06 /* testTests.xctest */;
+			productReference = 0A1917BC217BA9AE00D34306 /* testTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		0ADCF43C2177CB34000FDB06 /* testUITests */ = {
@@ -141,7 +143,7 @@
 			);
 			name = testUITests;
 			productName = testUITests;
-			productReference = 0ADCF43D2177CB34000FDB06 /* testUITests.xctest */;
+			productReference = 0A1917BD217BA9AE00D34306 /* testUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,9 +194,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1917BE217BAFE300D34306 /* Main.storyboard in Resources */,
 				0ADCF42C2177CB32000FDB06 /* LaunchScreen.storyboard in Resources */,
 				0ADCF4292177CB32000FDB06 /* Assets.xcassets in Resources */,
-				0ADCF4272177CB0B000FDB06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
