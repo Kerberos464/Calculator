@@ -1,14 +1,7 @@
-//
-//  ViewController.swift
-//  test
-//
-//  Created by Dmitry on 17/10/2018.
-//  Copyright © 2018 Dmitry. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
+    var dotIsPressed = false
     var stillTyping = false
     var firstOperand: Double = 0
     var secondOperand: Double = 0
@@ -20,6 +13,7 @@ class ViewController: UIViewController {
         set {
             var outputValue = "\(newValue)"
             var valueArray = outputValue.components(separatedBy: ".")
+            
             if valueArray[1] == "0" {
                 outputValue = valueArray[0]
             }
@@ -28,17 +22,26 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    func getCharacterByIndex(_ string: String, _ index: Int) -> String {
+        let index = string.index(string.startIndex, offsetBy: index)
+        return "\(string[index])"
+    }
+    
+    
     @IBOutlet weak var displayResultLabel: UILabel!
     
     @IBAction func numberPressed(_ sender: UIButton) {
         let number = sender.currentTitle!
         if stillTyping {
-            if displayResultLabel.text!.count < 20 {
+            if displayResultLabel.text!.count < 15 {
                 displayResultLabel.text! = displayResultLabel.text! + number
             }
         } else {
             displayResultLabel.text = number
-            stillTyping = true
+            if getCharacterByIndex(displayResultLabel.text!, 0) != "0" {
+                stillTyping = true
+            }
         }
     }
     
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
         firstOperand = currentInput
         stillTyping = false
         operationSign = sender.currentTitle!
+        dotIsPressed = false
     }
     
     func operateWithTwoOperands(operation: (Double, Double) -> Double) {
@@ -57,6 +61,8 @@ class ViewController: UIViewController {
         if stillTyping {
             secondOperand = currentInput
         }
+        
+        dotIsPressed = false
         
         switch operationSign {
         case "+":
@@ -78,6 +84,7 @@ class ViewController: UIViewController {
         secondOperand = 0
         currentInput = 0
         operationSign = ""
+        dotIsPressed = false
     }
 
     @IBAction func squareRootButtonPressed(_ sender: UIButton) {
@@ -85,6 +92,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dotButtonPressed(_ sender: UIButton) {
+        if stillTyping && !dotIsPressed {
+            displayResultLabel.text = displayResultLabel.text! + "."
+        } else if !stillTyping && !dotIsPressed {
+            displayResultLabel.text = "0."
+        }
+        dotIsPressed = true
     }
     
     @IBAction func plusMinusButtonPressed(_ sender: UIButton) {
@@ -92,7 +105,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func percentButtonPressed(_ sender: UIButton) {
+        if firstOperand == 0 {
+            currentInput = currentInput / 100
+        } else {
+            secondOperand = firstOperand * currentInput / 100
+        }
+        stillTyping = false
     }
-    
-
 }
